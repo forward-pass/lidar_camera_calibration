@@ -4,7 +4,7 @@
   
 
   <!-- ArUco mapping -->
-  <node pkg="aruco_mapping" type="aruco_mapping" name="aruco_mapping" output="screen">
+  <node pkg="aruco_mapping" type="aruco_mapping" name="aruco_mapping" output="log">
     <remap from="/image_raw" to="/camera/color/image_raw"/>
 
     <param name="calibration_file" type="string" value="$(find lidar_camera_calibration)/conf/calibration_file.ini" /> 
@@ -22,3 +22,37 @@
   </node>
 </launch>
 
+<!-- 
+Lidar with respect to the Camera
+Average translation is:
+ -0.109413
+-0.0415952
+ -0.209649
+Average rotation is:
+   0.991704  0.00137146    0.128533
+-0.00815991    0.998598   0.0523032
+  -0.128281  -0.0529182    0.990325
+Average transformation is: 
+   0.991704  0.00137146    0.128533   -0.109413
+-0.00815991    0.998598   0.0523032  -0.0415952
+  -0.128281  -0.0529182    0.990325   -0.209649
+          0           0           0           1
+Final rotation is:
+   0.129322     -0.9916 -0.00216105
+  0.0522967  0.00899671   -0.998591
+   0.990223    0.129027   0.0530209
+Final ypr is:
+0.384285
+-1.43084
+  1.1809
+Average RMSE is: 0.0352389
+RMSE on average transformation is: 0.0370821
+[find_transform-2] process has finished cleanly
+log file: /home/stoplime/.ros/log/a812906a-7760-11e9-8107-38b1dbe3ac87/find_transform-2*.log
+
+
+0.99170456997952227577	-0.0081599278894800922039	-0.12828109272490231139	0.081271955473937923752
+0.0013714563680931001314	0.99859782149477531804	-0.052918121807048840388	0.030592699941515666338
+0.12853298557940183409	0.05230326966181245907	0.9903250361151612195	0.22385939800994354896
+0	0	0	1
+ -->
