@@ -9,7 +9,7 @@
 
     <param name="calibration_file" type="string" value="$(find lidar_camera_calibration)/conf/calibration_file.ini" /> 
     <param name="num_of_markers" type="int" value="2" />
-    <param name="marker_size" type="double" value="0.163"/>
+    <param name="marker_size" type="double" value="0.188"/>
     <param name="space_type" type="string" value="plane" />
     <param name="roi_allowed" type="bool" value="false" />
 
@@ -24,6 +24,32 @@
 
 <!-- 
 Lidar with respect to the Camera
+Average translation is:
+-0.0776112
+ -0.129342
+ 0.0196587
+Average rotation is:
+    0.992648 -0.000408014     0.121038
+ -0.00544663     0.998831    0.0480356
+   -0.120916   -0.0483417     0.991485
+Average transformation is: 
+    0.992648 -0.000408014     0.121038   -0.0776112
+ -0.00544663     0.998831    0.0480356    -0.129342
+   -0.120916   -0.0483417     0.991485    0.0196587
+           0            0            0            1
+Final rotation is:
+    0.121828    -0.992551 -0.000382329
+   0.0480312   0.00628022    -0.998826
+    0.991388     0.121667    0.0484386
+Final ypr is:
+0.375543
+-1.43946
+ 1.19191
+Average RMSE is: 0.0132055
+RMSE on average transformation is: 0.0168567
+[find_transform-2] process has finished cleanly
+
+
 Average translation is:
  -0.109413
 -0.0415952

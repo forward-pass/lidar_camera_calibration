@@ -1,5 +1,5 @@
 ﻿lidar_camera_calibration:
   camera_frame_topic: /camera/color/image_raw
-  camera_info_topic: /camera/color/camera_info
+  camera_info_topic: camera_info_spoofing/camera_info
   velodyne_topic: /velodyne_points
 
